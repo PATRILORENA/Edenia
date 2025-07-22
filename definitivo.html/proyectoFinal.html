@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Proyecto Web, Inicio</title>
+    <link rel="stylesheet" href="css/proyectoFinal.css" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.svg" sizes="16x16" /><!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> de w3 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+  </head>
+  <body>
+   <header class="header">
+    <div class="header-container">
+    <div class="header-top">
+    <!-- LOGO -->
+    <div class="logo-container"><img src="img/logosvg.svg" alt="Logo" class="logo-img" /></div>
+    <div class="image-container"><img src="img/ChPlayaAnc.jpg" alt="Champú sólido" class="shampoo-img" /></div>
+    
+    <!-- BOTON HAMBURGUESA -->
+  <button class="menu-toggle" onclick="document.querySelector('.menu-list').classList.toggle('show')">☰</button>
+</div>
+</div>
+<!-- MENU DE NAVEGACIÓN -->
+<nav class="menu">
+  <ul class="menu-list">
+    <li><a href="proyectoFinal.html">Inicio</a></li>
+    <li><a href="gsap-SobreMi.html">SobreMi</a></li>
+    <li><a href="contactoProyecto.html">Contacto</a></li>
+    <li><a href="apiProyectoF.html">Opiniones</a></li>
+    <li><a href="mapaProyectoF.html">Mapa</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="cuidadosProyectoF.html">Cuidados</a></li>
+    <li><a href="champu-solido-diy">🌿🧪 Haz tu propio champú🧼</a></li>
+  </ul>
+</nav>
+</header>
+
+    <main>
+  <!-- Mis productos -->
+  <section class="estanteria">
+    <div class="zone">
+      
+      <h2>✨¡Repite conmigo! Creo en una belleza sin residuos, sostenible y consciente.</h2>
+        <!-- carrito -->
+      <div class="carrito-container">
+            <a href="carrito.html" class="carrito-enlace">
+            <img src="iconos/icono-carrito.svg" alt="Carrito de compra" class="icono-carrito">
+            <span id="contadorCarrito">0</span></a>
+      </div>
+      </div>
+  
+  
+  <div class="grid-productos">
+    
+    <div class="tarjeta-producto">
+      <img src="img/CHmiel.JPG" alt="CHmiel" class="producto-img" />
+      <h3>Miel de Abeja</h3>
+      <p>Es calmante, aporta una hidratación profunda, hidrata nuestro cabello desde el interior, acondicionándolo y fortaleciéndolo. Además ayuda a limpiar el cuero cabelludo, combatir el frizz, y proteger contra el envejecimiento capilar.</p>
+      <span class="precio">20€</span>
+      <button onclick="agregarAlCarrito('Miel de Abeja', 20)">Añadir</button>
+    </div>
+
+    <div class="tarjeta-producto">
+      <img src="img/corazonRojo.jpg" alt="Champú de Frutos Rojos" class="producto-img" />
+      <h3>Frutos Rojos</h3>
+      <p>Sus antioxidantes, como las antocianinas, combaten los radicales libres, protegiendo los folículos pilosos promoviendo el crecimiento saludable. Su vitamina C,  también juega un papel crucial en la producción de colágeno, esencial para la estructura del cabello.</p>
+      <span class="precio">22€</span>
+      <button onclick="agregarAlCarrito('Frutos Rojos', 22)">Añadir</button>
+    </div>
+
+    <div class="tarjeta-producto">
+      <img src="img/chOrtiga.jpg" alt="Champú de Ortiga" class="producto-img" />
+      <h3>Ortiga</h3>
+      <p>Regula el sebo, estimula el crecimiento, previene la caída y fortalece las fibras capilares. Protege el pelo de daños externos, como la contaminación y rayos UV, gracias a sus propiedades antioxidantes, lo que resulta en un cabello más brillante y revitalizado.</p>
+      <span class="precio">20€</span>
+      <button onclick="agregarAlCarrito('Ortiga', 20)">Añadir</button>
+    </div>
+
+    <div class="tarjeta-producto">
+      <img src="img/chblanco.png" alt="Champú de Arroz Y Avena" class="producto-img" />
+      <h3>Arroz & Avena</h3>
+      <p>Ofrecen múltiples beneficios para el pleo, incluyendo hidratación, fortalecimiento, reparación y brillo. La avena ayuda a hidratar y suavizar el pelo, mientras que el arroz, especialmente, puede fortalecerlo, protegerlo de daños y estimular el crecimiento</p>
+      <span class="precio">25€</span>
+      <button onclick="agregarAlCarrito('Arroz & Avena', 25)">Añadir</button>
+    </div>
+
+    <div class="tarjeta-producto">
+      <img src="img/girasol.jpg" alt="Champú de Girasol" class="producto-img" />
+      <h3>Girasol</h3>
+      <p>Hidrata profundamente, protege contra el daño solar y la contaminación, previene el frizz y la caída. Además, puede ayudar a combatir la caspa, fortalecer el cabello desde la raíz y promover un cabello más suave, brillante y manejable.</p>
+      <span class="precio">25€</span>
+      <button onclick="agregarAlCarrito('Girasol', 25)">Añadir</button>
+    </div>
+
+   <div class="tarjeta-producto">
+      <img src="img/chRomero.jpg" alt="Champú de Romero" class="producto-img" />
+      <h3>Romero</h3>
+      <p>Sus compuestos como el ácido rosmarínico y carnosol fortalecen la raíz del pelo, reduciendo la caída y rotura. Estimula el crecimiento, previene la caída y mejora  la salud del cuero cabelludo. También puede ayudar a controlar la caspa, la grasa y a darle brillo al cabello.</p>
+      <span class="precio">25€</span>
+      <button onclick="agregarAlCarrito('Romero', 25)">Añadir</button>
+    </div>
+
+    <div class="tarjeta-producto">
+      <img src="img/rosaroja.jpg" alt="Champú de Rosas" class="producto-img" />
+      <h3>Rosas</h3>
+      <p>Estimula el crecimiento, fortale las raíces, previene la caída. También puede ayudar a equilibrar el pH del cuero cabelludo y combatir la caspa, la grasa y a darle brillo al cabello. Sus propiedades antimicrobianas y antiinflamatorias combaten la caspa causada por infecciones o irritaciones.</p>
+      <span class="precio">20€</span>
+      <button onclick="agregarAlCarrito('Rosas', 25)">Añadir</button>
+    </div>
+
+  <div class="tarjeta-producto">
+      <img src="img/chMarron.jpg" alt="Champú de Chocolate" class="producto-img" />
+      <h3>Chocolate</h3>
+      <p>El cacao especialmente ofrece varios beneficios para el pelo, incluyendo hidratación profunda, brillo, fortalecimiento y protección contra daños, reduciendo la caída y mejorando su resistencia. Sus componentes, como vitaminas, minerales y antioxidantes, ayudan a revitalizar el pelo, especialmente el seco y dañado, dejándolo más suave, sedoso y manejable</p>
+      <span class="precio">27€</span>
+      <button onclick="agregarAlCarrito('Chocolate', 27)">Añadir</button>
+  </div>
+ <div class="tarjeta-producto">
+      <img src="img/chNaranja.png" alt="Champú de Naranja" class="producto-img" />
+      <h3>Naranja</h3>
+      <p>Gracias a sus nutrientes como vitaminas A y B, y especialmente la vitamina C y antioxidantes, protegen la hebra de radicales libres o rayos UV, fortalecen el pelo, aportan brillo y suavidad, combaten  la caspa y promueven el crecimiento saludable.</p>
+      <span class="precio">27€</span>
+      <button onclick="agregarAlCarrito('Naranja', 25)">Añadir</button>
+  </div>
+  </div>
+
+</section>
+
+
+
+
+    </main>
+    <footer>
+      <p>&copy; 2025 Mi Sitio Web 💻| Todos los derechos reservados <br>
+      Edenia 🌿<br>
+Creadora de contenido sobre champú sólido & cosmética natural <br>
+Desarrolladora web en proceso | Madre y emprendedora con propósito <br>
+
+📧 [tucorreo@ejemplo.com] <br>
+🌐 [www.tupaginaweb.com]  <br>
+📷 Instagram: [@edenia_hs] <br>
+🛍️ Descubre tu champú ideal → [Enlace a tu tienda o producto personalizado] <br>
+
+“Cuidar de ti y del planeta empieza en la ducha.”</p>
+    </footer>
+    <script src="js/proyectoFinal.js"></script>
+    <script src="js/carrito.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/proyectoFinal.css" />
+  <link rel="icon" type="image/x-icon" href="img/favicon.svg" sizes="16x16" />
+</head>
+<body>
+  <header class="header">
+  <div class="header-top">
+    <div class="logo-container">
+      <img src="img/logosvg.svg" alt="Logo" class="logo-img" />
+    </div>
+    <div class="image-container">
+      <img src="img/ChPlayaAnc.jpg" alt="Champú sólido" class="shampoo-img" />
+    </div>
+  </div>
+  <button class="menu-toggle" onclick="document.querySelector('.menu-list').classList.toggle('show')">
+        ☰
+  </button>
+
+  <nav class="menu">
+    <ul class="menu-list">
+      <li><a href="proyectoFinal.html">Inicio</a></li>
+      <li><a href="gsap-SobreMi.html">Sobre mí</a></li>
+      <li><a href="contactoProyecto.html">Contacto</a></li>
+      <li><a href="apiProyectoF.html">API</a></li>
+      <li><a href="mapaProyectoF.html">Mapa</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+    <h1 style="text-align: center;">Dashboard</h1>
+    <section class="dashboard">
+      <div class="card">
+        <h2>Usuarios</h2>
+        <p>125</p>
+      </div>
+      <div class="card">
+        <h2>Ventas</h2>
+        <p>€3,500</p>
+      </div>
+      <div class="card">
+        <h2>Visitas</h2>
+        <p>9,340</p>
+      </div>
+    </section>
+
+    <canvas id="grafico"></canvas>
+  </main>
+
+  <footer>
+    <p>© 2025 Dashboard</p>
+  </footer>
+
+<link rel="stylesheet" href="js/proyectoFinal.js">
+</body>
+</html>

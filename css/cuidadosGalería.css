@@ -1,0 +1,188 @@
+/* Main body styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #afcfb0;
+  color: #222;
+}
+
+.header {
+  background: linear-gradient(to bottom, #525e52, #8dad8d);
+  padding: 2.5rem 1.5rem;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+.header-container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Parte superior del header desktop*/
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: 400px;
+  flex-wrap: nowrap;
+}
+.logo-container {
+  flex: 0 0 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo-img {
+  max-width: 100%;
+  height: 300px;
+  max-height: 400px;
+}
+
+.image-container {
+  flex: 0 0 70%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+
+.shampoo-img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 360px;
+  border-radius: 80px;
+  object-fit: cover;
+}
+
+.shampoo-img:hover {
+  transform: scale(1.02);
+}
+
+/* MENÚ */
+/* Menú principal */
+.menu {
+  width: 100%;
+  padding: absolute;
+  bottom: 0.5rem; 
+}
+.menu-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.8rem;
+}
+/* para cambiar el color y estilo del texto menú */
+.menu-list a { 
+  text-decoration: none;
+  color: #f3f7f6;
+  font-weight: 800;
+  position: relative;
+  transition: color 0.3s ease;
+  font-family: "Neuton", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.menu-list a:hover {
+  color: #264e3f; /* Lila o púrpura suave */
+}
+/* Subrayado animado al pasar el mouse */
+.menu-list a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #5e3c8d;
+  transition: width 0.3s ease;
+}
+
+.menu-list a:hover::after {
+  width: 100%;
+}
+/* HAMBURGUESA */
+.menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+        margin-top: 0.5rem;
+      }
+      h1, h2{
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 2rem;
+        color: white;
+      }
+
+      .zone{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 2em auto;
+        text-align: center;
+
+      }
+      
+/*CUIDADOS*/
+ .dinamico {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: #a2c2c5;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.beneficio-dinamico {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.beneficio-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  padding: 10px;
+  color: #000; /* asegúrate que el texto se vea */
+}
+.beneficio-item video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  display: block;
+}
+.beneficio-item h3 {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #fff;
+}
+.beneficio-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.beneficio-dinamico.beneficio-texto h2 p {
+color: #3f2a0e;
+}
+/* FOOTER */
+header, footer {
+  background: #4d767e;
+  color: #fff;
+  padding: 1em 0;
+}

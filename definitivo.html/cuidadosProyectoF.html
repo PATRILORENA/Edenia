@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galería, cuidados</title>
+  <link rel="stylesheet" href="css/cuidadosGalería.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.svg" sizes="16x16" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+    <div class="header-top">
+    <!-- LOGO -->
+    <div class="logo-container"><img src="img/logosvg.svg" alt="Logo" class="logo-img" /></div>
+    <div class="image-container"><img src="img/ChPlayaAnc.jpg" alt="Champú sólido" class="shampoo-img" /></div>
+    
+    <!-- BOTON HAMBURGUESA -->
+  <button class="menu-toggle" onclick="document.querySelector('.menu-list').classList.toggle('show')">☰</button>
+</div>
+</div>
+<!-- MENU DE NAVEGACIÓN -->
+<nav class="menu">
+  <ul class="menu-list">
+    <li><a href="proyectoFinal.html">Inicio</a></li>
+    <li><a href="gsap-SobreMi.html">SobreMi</a></li>
+    <li><a href="contactoProyecto.html">Contacto</a></li>
+    <li><a href="apiProyectoF.html">Opiniones</a></li>
+    <li><a href="mapaProyectoF.html">Mapa</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="cuidadosProyectoF.html">Cuidados</a></li>
+    <li><a href="champu-solido-diy">🌿🧪 Haz tu propio champú🧼</a></li>
+  </ul>
+</nav>
+</header>
+  <section class="beneficios dinamico">
+  <div class="beneficio-texto">
+    <h2>¿Por qué elegir nuestro champú sólido?</h2>
+    <p>No solo  se trata de vender champú, quiero que sepas  como debes tratar tu pelo,<br>
+      que hacer cuando vayas a la playa o a la piscina para cuidar tu hebra. Tambien como<br>
+      tratar tu pelo y tu cuero cabelludo con material casero y que puedas hacerte tus <br>
+      propias mascarillas según tus necesidades</p>
+  </div>
+  <div class="beneficio-dinamico">
+    <div class="beneficio-item" data-text="como tratar tu pelo despues de lavarlo.">
+      <video autoplay muted loop playsinline>
+      <source src="img/si&no.mp4" type="video/mp4">
+     </video>
+    <h3>como tratar tu pelo despues de lavarlo.</h3>
+    </div>
+    <div class="beneficio-item" data-text="Como lavar tu pelo con champú sólido.">
+      <video autoplay muted loop playsinline>
+      <source src="img/usoDucha.mp4" type="video/mp4">
+     </video>
+      <h3>Como lavar tu pelo con champú sólido.</h3>
+    </div>
+    <div class="beneficio-item" data-text="prepara la mascarilla casera ideal para ti">
+  <video autoplay muted loop playsinline>
+    <source src="img/duo.mp4" type="video/mp4">
+  </video>
+  <h3>Prepara la mascarilla casera ideal para ti</h3>
+</div>                                        
+  </div>
+</section>
+
+<!-- Librerías primero -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/dist/lenis.min.js"></script>
+
+<!-- Tus scripts después -->
+<script src="js/cuidadosGaleria.js"></script>
+
+
+   <footer>
+      <p>&copy; 2025 Mi Sitio Web 💻| Todos los derechos reservados <br>
+      Edenia 🌿<br>
+      Creadora de contenido sobre champú sólido & cosmética natural <br>
+      Desarrolladora web en proceso | Madre y emprendedora con propósito <br>
+
+      📧 [tucorreo@ejemplo.com] <br>
+      🌐 [www.tupaginaweb.com]  <br>
+      📷 Instagram: [@edenia_hs] <br>
+      🛍️ Descubre tu champú ideal → [Enlace a tu tienda o producto personalizado] <br>
+
+“Cuidar de ti y del planeta empieza en la ducha.”</p>
+    </footer>
+</body>
+</html>

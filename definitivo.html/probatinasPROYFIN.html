@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galería</title>
+  <link rel="stylesheet" href="proyectoFinal.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.svg" sizes="16x16" />
+  <style>
+  .beneficios {
+  padding: 2rem;
+  background-color: #e8f5e9;
+  text-align: center;
+}
+
+.beneficios h2 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.beneficios-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.beneficio {
+  max-width: 250px;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.beneficio:hover {
+  transform: translateY(-5px);
+}
+
+.beneficio img {
+  width: 250px;
+  height: 230px;
+  margin-bottom: 0.5rem;
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+        <img
+          src="logosvg.svg"
+          alt="Logo"
+          style="width: 300px; height: auto"
+          class="logo"
+        />
+        <ul>
+          <li><a href="proyectoFinal.html">Inicio</a></li>
+          <li><a href="gsap-SobreMi.html">Sobre mí</a></li>
+          <li><a href="contactoProyecto.html">Contacto</a></li>
+          <li><a href="apiProyectoF.html">API</a></li>
+          <li><a href="mapaProyectoF.html">Mapa</a></li>
+          <li><a href="dashboardProyectoF.html">Dashboard</a></li>
+          <li><a href="galeriaProyectoF.html">Galería</a></li>
+          <li><a href="#servicios.html">Servicios</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <section class="beneficios">
+  <h2>¿Por qué elegir nuestro champú sólido?</h2>
+  <div class="beneficios-grid">
+    <div class="beneficio">
+      <img src="img/bañomaria.jpg" alt="mezcla">
+      <h3>100% Natural</h3>
+      <p>Libre de químicos, hecho con aceites esenciales y hierbas puras.</p>
+    </div>
+    <div class="beneficio">
+      <img src="img/PETALOSfLORrOJA.jpg" alt="chMarron">
+      <h3>Sin Plástico</h3>
+      <p>Empaque compostable, cuidamos el planeta con cada barra.</p>
+    </div>
+    <div class="beneficio">
+      <img src="img/escencias.jpg" alt="Vegano">
+      <h3>Vegano</h3>
+      <p>No usamos ingredientes de origen animal ni hacemos pruebas en ellos.</p>
+    </div>
+  </div>
+</section>
+
+   <footer>
+      <p>&copy; 2025 Mi Sitio Web | Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
+
+

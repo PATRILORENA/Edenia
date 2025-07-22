@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto</title>
+  <link rel="stylesheet" href="css/proyectoFinal.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.svg" sizes="16x16" />
+
+</head>
+<body>
+<header class="header">
+  <div class="header-top">
+    <div class="logo-container">
+      <img src="img/logosvg.svg" alt="Logo" class="logo-img" />
+    </div>
+    <div class="image-container">
+      <img src="img/ChPlayaAnc.jpg" alt="Champú sólido" class="shampoo-img" />
+    </div>
+  </div>
+ <button class="menu-toggle" onclick="document.querySelector('.menu-list').classList.toggle('show')">
+        ☰
+  </button>
+
+  <nav class="menu" id="menu">
+    <ul class="menu-list">
+      <li><a href="proyectoFinal.html">Inicio</a></li>
+      <li><a href="gsap-SobreMi.html">Sobre mí</a></li>
+      <li><a href="contactoProyecto.html">Contacto</a></li>
+      <li><a href="apiProyectoF.html">API</a></li>
+      <li><a href="mapaProyectoF.html">Mapa</a></li>
+      <li><a href="dashboardProyectoF.html">Dashboard</a></li>
+      <li><a href="galeriaProyectoF.html">Galería</a></li>
+      <li><a href="#servicios.html">Servicios</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<br><br><br>
+  <div id="header-placeholder"></div>
+  <main>
+    <section>
+      <h1>Contacto</h1>
+      <form id="contactForm">
+        <label>Nombre:<input type="text" name="nombre" required /></label>
+        <label>Email:<input type="email" name="email" required /></label>
+        <label>Mensaje:<textarea name="mensaje" required></textarea></label>
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="form-mensaje"></div>
+    </section>
+  </main>
+  <div id="footer-placeholder"></div>
+  
+  <p class="horario-info">
+  *Responderé los mensajes en horario laboral: de lunes a viernes, de 9:00 a 16:00. ¡Gracias por tu paciencia!
+</p>
+
+  <script src="js/form-validation.js"></script>
+
+</body>
+</html>

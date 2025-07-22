@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap" rel="stylesheet');
+/* Main body styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #afcfb0;
+  color: #222;
+}
+
+.header {
+  background: linear-gradient(to bottom, #525e52, #8dad8d);
+  padding: 2.5rem 1.5rem;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+.header-container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Parte superior del header desktop*/
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: 400px;
+  flex-wrap: nowrap;
+}
+.logo-container {
+  flex: 0 0 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo-img {
+  max-width: 100%;
+  height: 300px;
+  max-height: 400px;
+}
+
+.image-container {
+  flex: 0 0 70%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+
+.shampoo-img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 360px;
+  border-radius: 80px;
+  object-fit: cover;
+}
+
+.shampoo-img:hover {
+  transform: scale(1.02);
+}
+
+/* MENÚ */
+/* Menú principal */
+.menu {
+  width: 100%;
+  padding: absolute;
+  bottom: 0.5rem; 
+}
+.menu-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.8rem;
+}
+/* para cambiar el color y estilo del texto menú */
+.menu-list a { 
+  text-decoration: none;
+  color: #f6f8f8;
+  font-weight: 1000;
+  position: relative;
+  transition: color 0.3s ease;
+  font-family: "Neuton", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.menu-list a:hover {
+  color: #264e3f; /* Lila o púrpura suave */
+}
+/* Subrayado animado al pasar el mouse */
+.menu-list a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #5e3c8d;
+  transition: width 0.3s ease;
+}
+
+.menu-list a:hover::after {
+  width: 100%;
+}
+/* HAMBURGUESA */
+.menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+        margin-top: 0.5rem;
+      }
+
+h1, h2{
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 2rem;
+        color: white;
+      }
+
+      .zone{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 2em auto;
+
+      }
+ /* CARRITO */
+.carrito-container {
+
+  margin-left: 100px;
+  margin-top: 20px;
+  
+}
+
+.carrito-container:hover{
+  transform: scale(12.5rem);
+}
+
+.carrito-enlace {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.icono-carrito {
+  width: 32px;
+  height: auto;
+}
+
+#contadorCarrito {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #d49891;
+  color: white;
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* estantería de champú sólido */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* en pantallas grandes: 3 columnas */
+  gap: 2rem;
+  margin: auto 5em;
+}
+.tarjeta-producto {
+  background-color: #f8ebf8;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-producto:hover {
+  transform: scale(1.02);
+}
+
+.tarjeta-producto img.producto-img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+.tarjeta-producto h2{
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.tarjeta-producto h3 {
+  margin: 0.5rem 0;
+  color:#555;
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tarjeta-producto p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.tarjeta-producto .precio {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 1rem;
+  color: #4a4a4a;
+}
+
+.tarjeta-producto button {
+  background-color: #3d463e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tarjeta-producto button:hover {
+  background-color: #388e3c;
+}
+
+  /* página de contacto */
+  .horario-info {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 1rem;
+  font-style: italic;
+}
+/* API */
+#api-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .api-card {
+      background: #15442a;
+      border: 1px solid #527975;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+#load-more {
+        display: block;
+        margin: 2rem auto;
+        padding: 10px 20px;
+        font-size: 1rem;
+        background-color: #388e3c;
+        color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      #load-more:hover {
+        background-color: #2e7d32;
+      }
+      .card {
+        display: block;
+        background-color: #5cb0d1;
+        border-radius: 16px;
+        padding: 1.5rem;
+        margin: 1rem;
+        text-decoration: none;
+        color: #333;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease, box-shadow 0.3s ease;
+        border: 1px solid #5e90db;
+        max-width: 100%;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0, 128, 0, 0.2);
+      }
+
+      .card-content h2 {
+        font-size: 1.3rem;
+        color: #2e7d32;
+        margin-bottom: 0.5rem;
+      }
+
+      .card-content p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        margin: 0.4rem 0;
+      }
+
+      .card-content strong {
+        color: #388e3c;
+      }
+      /* MAPA */
+      #map {
+      height: 400px;
+      width: 90%;
+      max-width: 800px;
+      margin: 2rem auto;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+      /* DASHBOARD */
+     .dashboard {
+      padding: 2rem;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .card {
+      background: rgb(190, 207, 192);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    canvas {
+      max-width: 600px;
+      margin: 2rem auto;
+      display: block;
+    }
+    /* FOOTER */
+header, footer {
+  background: #4d767e;
+  color: #fff;
+  padding: 1em 0;
+}
+
+/* RESPONSIVE */ 
+/* estanteria de productos Responsive: 3 filas en pc*/
+@media (max-width: 1024px) {
+  .menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  .grid-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* TABLET */
+@media (max-width: 768px) {
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra el contenido horizontal */
+  }
+  .header-top{
+  flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    gap: 1rem; 
+  }
+  .menu-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-list li {
+    margin: 0.5rem 0;
+  }
+
+  /* MENÚ */
+  nav.menu {
+    order: 3;
+    width: 100%;
+    max-width: 400px;
+    align-self: center;
+    margin-top: 1rem;
+  }
+  /* carrito en tablet*/
+ .carrito-container {
+    order: 2;
+    align-self: center;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50px;
+    min-height: 50px;
+  }
+
+  .carrito-enlace {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .icono-carrito {
+    width: 40px; /* un poco más grande en tablet */
+  }
+
+  #contadorCarrito {
+    top: -10px;
+    right: -10px;
+    font-size: 1rem;
+    padding: 3px 7px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-top {
+    gap: 0.5rem;
+  }
+
+  .logo-container,
+  .image-container {
+    width: 100%;
+  }
+
+  .shampoo-img {
+    max-height: 200px;
+  }
+/* hamburguesa desplegable en móviles */
+  .menu-toggle {
+          display: block;
+          align-self: flex-start;
+          margin-top: 1rem;
+        }
+
+  .menu {
+          position: static;
+          width: 100%;
+        }
+
+  .menu-list {
+          display: none;
+          flex-direction: column;
+          align-items: center;
+          background-color: var(--clr-rosa-palo);
+          width: 100%;
+          padding: 1rem 0;
+          margin-top: 0.5rem;
+        }
+
+  .menu-list.show {
+          display: flex;
+        }
+  /* carrito en columna en móviles*/
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .menu-list.show {
+    display: block;
+  }
+
+  .menu-list {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .menu-list li {
+    margin: 0.5rem 0;
+  }
+
+  .carrito-container {
+    align-self: flex-end;
+  }      
+  /* estantería de productos una fila en móviles */
+  .grid-productos{
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+      }
+      
+      
+  

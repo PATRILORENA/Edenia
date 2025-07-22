@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="img/favicon.svg" sizes="16x16" />
+  <link rel="stylesheet" href="css/proyectoFinal.css" />
+  <title>Usuarios desde API</title>
+</head>
+<body>
+  <header class="header">
+  <div class="header-top">
+    <div class="logo-container">
+      <img src="img/logosvg.svg" alt="Logo" class="logo-img" />
+    </div>
+    <div class="image-container">
+      <img src="img/ChPlayaAnc.jpg" alt="Champú sólido" class="shampoo-img" />
+    </div>
+  </div>
+  <button class="menu-toggle" onclick="document.querySelector('.menu-list').classList.toggle('show')">
+        ☰
+  </button>
+
+  <nav class="menu">
+    <ul class="menu-list">
+      <li><a href="proyectoFinal.html">Inicio</a></li>
+      <li><a href="gsap-SobreMi.html">Sobre mí</a></li>
+      <li><a href="contactoProyecto.html">Contacto</a></li>
+      <li><a href="apiProyectoF.html">Opiniones</a></li>
+      <li><a href="mapaProyectoF.html">Mapa</a></li>
+      <li><a href="dashboard.html">Resumenes</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="servicios">🌿🧪 Haz tu propio champú🧼</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <h1>Los Clientes dicen:</h1>
+    <div id="user-container" class="card-container"></div>
+    <button id="load-more">Mostrar más</button>
+
+  
+
+  <script>
+   const container = document.getElementById("user-container");
+      const loadMoreBtn = document.getElementById("load-more");
+
+      const urlUsers = "https://jsonplaceholder.typicode.com/comments";
+
+      let commentsData = []; // Aquí guardaremos todos los comentarios
+      let currentPage = 0;
+      const itemsPerPage = 10;
+
+      // Función para renderizar una página específica
+      function renderPage(page) {
+        const start = page * itemsPerPage;
+        const end = start + itemsPerPage;
+        const currentItems = commentsData.slice(start, end);
+
+        currentItems.forEach((comment) => {
+          const card = document.createElement("div");
+          card.classList.add("card");
+
+          card.innerHTML = `
+        <a href="comentario.html?id=${comment.id}" class="card">
+          <div class="card-content">
+            <h2>${comment.name}</h2>
+            <p><strong>Email:</strong> ${comment.email}</p>
+            <p><strong>Nombre:</strong> ${comment.name}</p>
+            <p>${comment.body}</p>
+          </div>
+        </a>
+      `;
+          container.appendChild(card);
+        });
+      }
+
+      // Petición a la API
+      fetch(urlUsers)
+        .then((response) => response.json())
+        .then((data) => {
+          commentsData = data;
+          renderPage(currentPage); // Cargar los primeros 10
+        })
+        .catch((error) => {
+          console.error("Error al cargar los usuarios:", error);
+          container.innerHTML = "<p>Error al cargar los datos.</p>";
+        });
+
+      // Evento para mostrar más
+      loadMoreBtn.addEventListener("click", () => {
+        currentPage++;
+        renderPage(currentPage);
+
+        if ((currentPage + 1) * itemsPerPage >= commentsData.length) {
+          loadMoreBtn.style.display = "none"; // Oculta el botón si ya no hay más
+        }
+      });
+  </script>
+  <footer>
+      <p>&copy; 2025 Mi Sitio Web | Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
